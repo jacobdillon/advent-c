@@ -7,7 +7,7 @@ bool isNice(char str[])
 	int vowels = 0;
 	int doubleLetter = 0;
 
-	for(int i = 0; i < strlen(str); i++)
+	for(int i = 0; i < strlen(str) - 1; i++)
 	{
 		if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
 			vowels++;
@@ -42,9 +42,7 @@ int main(int argc, char* argv[])
 	FILE *input = fopen("input", "r");
 
 	while (fgets(str, sizeof str, input) != NULL)
-	{
 		if(isNice(str)) count++;
-	}
 
 	printf("There are %d nice strings\n", count);
 
