@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 
 	FILE *input = fopen("input", "r");
 
-	while (fgets(str, sizeof str, input) != NULL)
+	while(fgets(str, sizeof str, input) != NULL)
 		if(isNice(str)) count++;
 
 	printf("There are %d nice strings\n", count);
